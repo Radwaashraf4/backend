@@ -1,0 +1,109 @@
+{
+  "method": "Distance to the average Mars terrain profile, after percentile-clip rescaling and standardisation",
+  "similarity_formula": "similarity = 1 / (1 + distance)",
+  "features": [
+    "elevation",
+    "slope_deg",
+    "local_relief",
+    "roughness",
+    "elev_std"
+  ],
+  "rescale_low": {
+    "elevation": -5887.0,
+    "slope_deg": 0.009876,
+    "local_relief": 1.0,
+    "roughness": 0.496649,
+    "elev_std": 0.496649
+  },
+  "rescale_high": {
+    "elevation": 6013.0,
+    "slope_deg": 22.18174,
+    "local_relief": 2434.0,
+    "roughness": 849.739439,
+    "elev_std": 849.739439
+  },
+  "standardise_scale": {
+    "elevation": 0.243532,
+    "slope_deg": 0.044955,
+    "local_relief": 0.190213,
+    "roughness": 0.188019,
+    "elev_std": 0.188019
+  },
+  "mars_profile_rescaled": {
+    "elevation": 0.432969,
+    "slope_deg": 0.024102,
+    "local_relief": 0.151602,
+    "roughness": 0.144947,
+    "elev_std": 0.144947
+  },
+  "mars_reference_raw": {
+    "elevation": {
+      "mean": -721.7352,
+      "median": -257.0,
+      "p25": -3702.0,
+      "p75": 1617.0
+    },
+    "slope_deg": {
+      "mean": 0.5442,
+      "median": 0.2395,
+      "p25": 0.0973,
+      "p75": 0.5993
+    },
+    "local_relief": {
+      "mean": 382.2828,
+      "median": 185.0,
+      "p25": 78.0,
+      "p75": 463.0
+    },
+    "roughness": {
+      "mean": 127.8984,
+      "median": 60.4778,
+      "p25": 25.2562,
+      "p75": 151.2632
+    }
+  },
+  "earth_sample_raw": {
+    "elevation": {
+      "mean": 1053.3685,
+      "median": 521.0,
+      "p25": 293.0,
+      "p75": 903.25
+    },
+    "slope_deg": {
+      "mean": 4.2765,
+      "median": 2.529,
+      "p25": 0.72,
+      "p75": 6.0853
+    },
+    "local_relief": {
+      "mean": 192.6953,
+      "median": 134.0,
+      "p25": 47.0,
+      "p75": 275.25
+    },
+    "roughness": {
+      "mean": 61.6132,
+      "median": 42.9046,
+      "p25": 14.4083,
+      "p75": 88.0252
+    }
+  },
+  "n_earth_points": 6000,
+  "n_mars_points": 1036800,
+  "earth_similarity_quantiles": {
+    "0.0": 0.0434,
+    "0.5": 0.3056,
+    "0.9": 0.4299,
+    "0.99": 0.4894,
+    "1.0": 0.6759
+  },
+  "verification": {
+    "stored_ranking_found": true,
+    "stored_rows_compared": 20,
+    "max_abs_distance_difference": 1.0024899499416762e-07,
+    "same_locations_same_order": true,
+    "reproduces_stored_ranking": true
+  },
+  "sklearn_version": "1.9.1",
+  "note": "Rebuilt from the saved feature tables; scikit-learn objects are version-sensitive, so re-run build_model.py if loading fails on a different version."
+}
